@@ -1,25 +1,25 @@
 class UseCaseCoverageCli < Formula
   desc "Command line interface for Use Case Coverage tool https://github.com/pedrovgs/UseCaseCoverage"
   homepage "https://github.com/pedrovgs/UseCaseCoverage"
-  version "0.5.0"
+  version "0.5.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.0/use_case_coverage_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "5876ceade915536b3d4df0b3fb798c5c19d0b81806248f3a4ce35f116f49507c"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "82423d36050f8aa42423ff7d6abb2fb0e081bd6f2c2dd4a81552edcc2d9eeafc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.0/use_case_coverage_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "ce3357159f137a3ed92956b32ecc5d4848bfe3b4ffd9af1cd73c9668d68ed97a"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "6d32c7724879106b0d53c55cec0bbd47d8848e38e408294a551c0e6b51840bac"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.0/use_case_coverage_cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bb21410ab35a027f13c25ccc2e352257ffbaec589ba8472399c24622e436ae44"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7c8d3c25692b639d7b6a78a4cdec4a28207da1f0f0772e7a04033d484aeb9b86"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.0/use_case_coverage_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e9fea3af99d7a0520faa72239b74201c4fe42050376d27261221355ebfc700fb"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ad39c0ec9388841e470564f0680c3443113a376b12edad6ba066fb6526e3eaf1"
     end
   end
   license "MIT"
