@@ -1,25 +1,25 @@
 class UseCaseCoverageCli < Formula
   desc "Command line interface for Use Case Coverage tool https://github.com/pedrovgs/UseCaseCoverage"
   homepage "https://github.com/pedrovgs/UseCaseCoverage"
-  version "0.5.1"
+  version "0.5.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "82423d36050f8aa42423ff7d6abb2fb0e081bd6f2c2dd4a81552edcc2d9eeafc"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.2/use_case_coverage_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "7b820ec4bc4c0f298f15ad0df9f91924c5ada872a11947bcc572332ed93c9a1e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-x86_64-apple-darwin.tar.xz"
-      sha256 "6d32c7724879106b0d53c55cec0bbd47d8848e38e408294a551c0e6b51840bac"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.2/use_case_coverage_cli-x86_64-apple-darwin.tar.xz"
+      sha256 "24073d3fee407e436b75b56a62d9a6e67436b5656f9b6223c586f577a0c25c79"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7c8d3c25692b639d7b6a78a4cdec4a28207da1f0f0772e7a04033d484aeb9b86"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.2/use_case_coverage_cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9917ac026c2dffb18ad3c694480bf8ea43a3a950a711db77836f2fa6f66066eb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.1/use_case_coverage_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ad39c0ec9388841e470564f0680c3443113a376b12edad6ba066fb6526e3eaf1"
+      url "https://github.com/pedrovgs/UseCaseCoverage/releases/download/v0.5.2/use_case_coverage_cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a55a5e183c0283704133754bd93cadc84d974ff7ba2deebda7c406ae38a8e1ad"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class UseCaseCoverageCli < Formula
   end
 
   def install
-    bin.install "ucc" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ucc" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ucc" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ucc" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ucc"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ucc"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ucc"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ucc"
+    end
 
     install_binary_aliases!
 
